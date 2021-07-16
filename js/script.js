@@ -16,9 +16,8 @@ Consigli del giorno:
 
 var listNumberRandom = [];
 var manyRandom = 5;
-var listNumberChoice = [];
-var time = 30 * 1000;
-//prendiamo i numeri dall'utente
+// var listNumberChoice;
+var time = 1 * 1000;
 
 //! generatore di numeri random
 
@@ -30,3 +29,26 @@ while (listNumberRandom.length < manyRandom) {
 }
 
 console.table(listNumberRandom);
+
+// stampa alert con i numeri generati
+alert(
+  "ricorda questi numeri \n è importatne!!" +
+    " " +
+    "\n\n\n\n" +
+    listNumberRandom
+);
+
+//!!!! dopo inserimento time dopo il quale parte la richiesta dei numeri
+
+setTimeout(myfunction, time);
+function myfunction() {}
+
+//!!!! da inserire nella funzione
+//chiediamo un numero all'utente fino a quando:
+//*validazione 1- fino a quando i numeri inseriti sono inferiori a manyRandom.lengt
+//*validazione 2- se il numero inserito non è un numero
+listNumberChoice = parseInt(
+  prompt("inserisci un numero della lista vista precedentemente")
+);
+
+console.log(listNumberChoice);
