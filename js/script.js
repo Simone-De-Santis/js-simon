@@ -40,23 +40,30 @@ alert(
 
 //!!!! dopo inserimento time dopo il quale parte la richiesta dei numeri
 
-// setTimeout(myfunction, time);
-// function myfunction() {}
+setTimeout(myfunction, time);
+function myfunction() {
+  while (listNumberChoice.length < manyRandom) {
+    var numberChoice = parseInt(
+      prompt("inserisci un numero della lista vista precedentemente")
+    );
+    if (numberChoice && !isNaN(numberChoice)) {
+      //inserisco il numero dell'utente in listNumberChoice
+      listNumberChoice.push(numberChoice);
+    }
+  }
+  console.log(listNumberChoice);
+  var numeriGiusti = [];
+  for (var i = 0; i < listNumberChoice.length; i++) {
+    if (listNumberRandom.includes(listNumberChoice[i])) {
+      numeriGiusti.push(listNumberChoice[i]);
+    }
+  }
+  console.log("numeri giusti" + numeriGiusti);
+}
 
 //!!!! da inserire nella funzione
 //chiediamo un numero all'utente fino a quando:
 //*validazione 1- fino a quando i numeri inseriti sono inferiori a manyRandom.lengt
 //*validazione 2- se il numero inserito non è un numero
 
-while (listNumberChoice.length < manyRandom) {
-  var numberChoice = parseInt(
-    prompt("inserisci un numero della lista vista precedentemente")
-  );
-  if (numberChoice && !isNaN(numberChoice)) {
-    //inserisco il numero dell'utente in listNumberChoice
-    listNumberChoice.push(numberChoice);
-  }
-}
-console.log(listNumberChoice);
-
-//! controllo per ogni numero inserito se è presente nell'array per ogni controllo ho bisogno del risultato per quantificare quanti e quali numeri sono stati inseriti in maniera errata
+//! controllo per ogni numero inserito se è presente nell'array dei numeri random. per ogni controllo ho bisogno del risultato per quantificare quanti e quali numeri sono stati inseriti in maniera errata
