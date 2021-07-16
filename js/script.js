@@ -13,3 +13,20 @@ Consigli del giorno:
 * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 * Commentate il codice.
  */
+
+var listNumberRandom = [];
+var manyRandom = 5;
+var listNumberChoice = [];
+var time = 30 * 1000;
+//prendiamo i numeri dall'utente
+
+//! generatore di numeri random
+
+while (listNumberRandom.length < manyRandom) {
+  var randomNumber = Math.floor(Math.random() * 100 + 1);
+  if (!listNumberRandom.includes(randomNumber)) {
+    listNumberRandom.push(randomNumber);
+  }
+}
+
+console.table(listNumberRandom);
