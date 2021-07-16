@@ -12,5 +12,4 @@ Consigli del giorno:
 * Dividete in piccoli problemi la consegna.
 * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 * Commentate il codice.
-
  */
