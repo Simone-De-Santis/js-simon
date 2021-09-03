@@ -31,30 +31,23 @@ while (listNumberRandom.length < manyRandom) {
 console.table(listNumberRandom);
 
 // stampa alert con i numeri generati
-alert(
-  "ricorda questi numeri \n è importatne!!" +
-    " " +
-    "\n\n\n\n" +
-    listNumberRandom
-);
+alert("ricorda questi numeri \n è importatne!!" + " " + "\n\n\n\n" + listNumberRandom);
 
 //!!!! dopo inserimento time dopo il quale parte la richiesta dei numeri
 
+var numeriGiusti = [];
 setTimeout(myfunction, time);
 function myfunction() {
   while (listNumberChoice.length < manyRandom) {
-    var numberChoice = parseInt(
-      prompt("inserisci un numero della lista vista precedentemente")
-    );
+    var numberChoice = parseInt(prompt("inserisci un numero della lista vista precedentemente"));
     if (numberChoice && !isNaN(numberChoice)) {
       //inserisco il numero dell'utente in listNumberChoice
       listNumberChoice.push(numberChoice);
     }
   }
   console.log(listNumberChoice);
-  var numeriGiusti = [];
   for (var i = 0; i < listNumberChoice.length; i++) {
-    if (listNumberRandom.includes(listNumberChoice[i])) {
+    if (!listNumberRandom.includes(listNumberChoice[i])) {
       numeriGiusti.push(listNumberChoice[i]);
     }
   }
